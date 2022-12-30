@@ -2,10 +2,10 @@
 
 ### How to start the app:
 
+- Open terminal
 - `git clone https://github.com/MWronski12/jwt-auth`
 - `cd backend`
 - `npm i`
-- Insert absolute path to db.sqlite file in the project .env file
 - `npm run start`
 - Open second terminal in the project root directory
 - `cd frontend`
