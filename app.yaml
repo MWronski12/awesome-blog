@@ -1,4 +1,4 @@
 runtime: nodejs18
 
 env_variables:
-  DB_PATH: "db.sqlite"
+  DB_PATH: "/tmp/db.sqlite"

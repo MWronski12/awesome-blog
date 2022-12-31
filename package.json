@@ -4,7 +4,6 @@
   "description": "Node.js demo for JWT authentication",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
   },
   "keywords": [
     "node.js",
