@@ -29,7 +29,7 @@ export default class PostListItem extends Component {
       <div className="my-3">
         {this.state.post && (
           <div className="d-flex flex-column">
-            <Link to={`/posts/${this.state.post.id}`}>
+            <Link to={`/awesome-blog/posts/${this.state.post.id}`}>
               <h1>{this.state.post.title}</h1>
             </Link>
             <span className="text-muted">

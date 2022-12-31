@@ -62,14 +62,14 @@ class App extends Component {
           <div className="container">
             <div className="navbar-nav mr-auto">
               <li className="nav-item">
-                <Link to={"/home"} className="nav-link">
+                <Link to={"/awesome-blog/home"} className="nav-link">
                   Home
                 </Link>
               </li>
 
               {showAdminContent && (
                 <li className="nav-item">
-                  <Link to={"/create-post"} className="nav-link">
+                  <Link to={"/awesome-blog/create-post"} className="nav-link">
                     Create post
                   </Link>
                 </li>
@@ -79,12 +79,16 @@ class App extends Component {
             {currentUser ? (
               <div className="navbar-nav ml-auto">
                 <li className="nav-item">
-                  <Link to={"/profile"} className="nav-link">
+                  <Link to={"/awesome-blog/profile"} className="nav-link">
                     {currentUser.username}
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <a href="/login" className="nav-link" onClick={this.logOut}>
+                  <a
+                    href="/awesome-blog/login"
+                    className="nav-link"
+                    onClick={this.logOut}
+                  >
                     LogOut
                   </a>
                 </li>
@@ -92,13 +96,13 @@ class App extends Component {
             ) : (
               <div className="navbar-nav ml-auto">
                 <li className="nav-item">
-                  <Link to={"/login"} className="nav-link">
+                  <Link to={"/awesome-blog/login"} className="nav-link">
                     Login
                   </Link>
                 </li>
 
                 <li className="nav-item">
-                  <Link to={"/register"} className="nav-link">
+                  <Link to={"/awesome-blog/register"} className="nav-link">
                     Sign Up
                   </Link>
                 </li>
@@ -109,13 +113,16 @@ class App extends Component {
 
         <div className="container mt-3">
           <Switch>
-            <Route exact path={["/", "/home"]} component={Home} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/register" component={Register} />
-            <Route exact path="/profile" component={Profile} />
-            <Route exact path="/create-post" component={CreatePost} />
             <Route
-              path="/posts/:id"
+              exact path={["/awesome-blog", "/awesome-blog/home"]}
+              component={Home}
+            />
+            <Route exact path="/awesome-blog/login" component={Login} />
+            <Route exact path="/awesome-blog/register" component={Register} />
+            <Route exact path="/awesome-blog/profile" component={Profile} />
+            <Route exact path="/awesome-blog/create-post" component={CreatePost} />
+            <Route
+              exact path="/awesome-blog/posts/:id"
               render={(props) => <PostDetails postId={props.match.params.id} />}
             />
           </Switch>

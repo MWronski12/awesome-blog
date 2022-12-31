@@ -29,7 +29,7 @@ class PostDetails extends Component {
 
   onDelete() {
     blogService.deletePost(this.props.postId).then((response) => {
-      this.props.history.push("/");
+      this.props.history.push("/awesome-blog");
     });
   }
 

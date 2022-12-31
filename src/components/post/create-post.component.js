@@ -28,7 +28,7 @@ class CreatePost extends Component {
       })
       .then((response) => {
         this.setState({ title: "", content: "" });
-        this.props.history.push(`/posts/${response.data.postId}`);
+        this.props.history.push(`/awesome-blog/posts/${response.data.postId}`);
       });
   }
 

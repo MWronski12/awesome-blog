@@ -20,8 +20,9 @@ export default class Bio extends Component {
           </div>
           <div className="flex-grow-1">
             <span>
-              This is my awesome blog, which is a project for Web Programming
-              course in Viana do Castelo!
+              This is my awesome blog. It is a simple project showcasing my
+              knowledge of modern authentication mechanisms using JWT tokens and
+              creating CRUD applications!
             </span>
           </div>
         </div>
