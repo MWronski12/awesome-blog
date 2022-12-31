@@ -4,7 +4,7 @@ const cors = require("cors");
 const bcrypt = require("bcryptjs");
 const app = express();
 
-const corsOptions = {};
+const corsOptions = { origin: "https://mwronski12.github.io/" };
 
 // middleware
 app.use(cors(corsOptions));
